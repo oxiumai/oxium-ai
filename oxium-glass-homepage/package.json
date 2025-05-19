@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
-    "build": "tsc -b && vite build --outDir dist",
-    "lint": "bunx biome lint --write && bunx tsc --noEmit",
-    "format": "bunx biome format --write",
+    "dev": "npm run build && vite --host 0.0.0.0",
+    "build": "vite build --outDir dist",
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "npx prettier --write .",
     "preview": "vite preview"
   },
   "dependencies": {
